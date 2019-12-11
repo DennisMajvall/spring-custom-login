@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.rest;
 
 import org.springframework.data.annotation.Id;
 

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.rest;
 
 import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;

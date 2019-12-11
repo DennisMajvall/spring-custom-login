@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -7,10 +7,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 @RestController
-@RequestMapping
+@RequestMapping("movies")
 public class MovieController {
 
     @Autowired
@@ -26,9 +24,9 @@ public class MovieController {
         return null;
     }
 
-    @GetMapping("/")
-    Iterable<Movie> getPosts(){
-        System.out.println(currentUserDetails());
+    @GetMapping
+    Iterable<Movie> getMovies(){
+        System.out.println("User details in movies/ " + currentUserDetails());
         return movieRepository.findAll();
     }
 
